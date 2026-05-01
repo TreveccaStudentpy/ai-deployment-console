@@ -5,14 +5,18 @@
   "description": "A Vercel-ready AI deployment console demo using Node.js serverless functions and the OpenAI API.",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
-    "start": "vercel dev",
-    "lint": "node --check api/ask.js"
+    "dev": "node server.js",
+    "vercel-dev": "vercel dev",
+    "start": "node server.js",
+    "lint": "node --check api/ask.js && node --check server.js"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "openai": "^4.104.0"
   },
   "devDependencies": {
