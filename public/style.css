@@ -321,223 +321,6 @@ h1 {
   min-height: 430px;
 }
 
-.topology-card {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(226, 232, 240, 0.64));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 18px 44px rgba(15, 23, 42, 0.12);
-  backdrop-filter: blur(20px);
-}
-
-.topology-card.compact {
-  margin: 10px 0 12px;
-  padding: 10px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
-  border-color: rgba(255, 255, 255, 0.14);
-  box-shadow: none;
-}
-
-.topology-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  color: #475467;
-  font-size: 0.78rem;
-  font-weight: 850;
-  text-transform: uppercase;
-}
-
-.compact .topology-header {
-  margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.7rem;
-}
-
-.topology-header strong {
-  color: #1d2939;
-}
-
-.compact .topology-header strong {
-  color: rgba(255, 255, 255, 0.86);
-}
-
-.topology-map {
-  position: relative;
-  height: 210px;
-  overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.08), transparent 46%),
-    linear-gradient(180deg, #ffffff, #f1f5f9);
-}
-
-.compact .topology-map {
-  height: 118px;
-  border-color: rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(135deg, rgba(6, 174, 212, 0.12), transparent 46%),
-    rgba(15, 23, 42, 0.24);
-}
-
-.topology-map::before {
-  position: absolute;
-  inset: 18px;
-  content: "";
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  transform: rotate(-12deg);
-}
-
-.compact .topology-map::before {
-  inset: 14px;
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.topology-node {
-  position: absolute;
-  z-index: 2;
-  display: grid;
-  min-width: 64px;
-  height: 36px;
-  place-items: center;
-  border: 1px solid rgba(37, 99, 235, 0.24);
-  border-radius: 999px;
-  background:
-    linear-gradient(180deg, #ffffff, #e2e8f0);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 14px 30px rgba(37, 99, 235, 0.14);
-  color: #1d2939;
-  font-size: 0.78rem;
-  font-style: normal;
-  font-weight: 900;
-}
-
-.compact .topology-node {
-  min-width: 48px;
-  height: 28px;
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: none;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.68rem;
-}
-
-.topology-node.intake {
-  top: 28px;
-  left: 24px;
-}
-
-.topology-node.api {
-  top: 88px;
-  left: 118px;
-}
-
-.topology-node.model {
-  top: 38px;
-  right: 22px;
-}
-
-.topology-node.output {
-  right: 44px;
-  bottom: 24px;
-}
-
-.compact .topology-node.intake {
-  top: 18px;
-  left: 16px;
-}
-
-.compact .topology-node.api {
-  top: 48px;
-  left: 44%;
-}
-
-.compact .topology-node.model {
-  top: 18px;
-  right: 16px;
-}
-
-.compact .topology-node.output {
-  right: 28px;
-  bottom: 16px;
-}
-
-.route {
-  position: absolute;
-  z-index: 1;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(37, 99, 235, 0.08), #2563eb, #06aed4);
-  box-shadow: 0 0 16px rgba(37, 99, 235, 0.26);
-  transform-origin: left center;
-}
-
-.route-a {
-  top: 58px;
-  left: 88px;
-  width: 92px;
-  transform: rotate(27deg);
-}
-
-.compact .route-a {
-  top: 38px;
-  left: 62px;
-  width: 108px;
-  transform: rotate(18deg);
-}
-
-.compact .route-b {
-  top: 58px;
-  left: 168px;
-  width: 86px;
-  transform: rotate(-24deg);
-}
-
-.compact .route-c {
-  top: 72px;
-  left: 168px;
-  width: 100px;
-  transform: rotate(18deg);
-}
-
-.compact .route-d {
-  top: 42px;
-  left: 62px;
-  width: 238px;
-  opacity: 0.3;
-}
-
-.route-b {
-  top: 105px;
-  left: 178px;
-  width: 82px;
-  transform: rotate(-33deg);
-}
-
-.route-c {
-  top: 126px;
-  left: 174px;
-  width: 104px;
-  transform: rotate(24deg);
-}
-
-.route-d {
-  top: 78px;
-  left: 92px;
-  width: 172px;
-  opacity: 0.48;
-}
-
 .signal-board {
   position: relative;
   overflow: hidden;
@@ -605,6 +388,103 @@ h1 {
 
 .window-bar span:nth-child(3) {
   background: #28c840;
+}
+
+.console-hero {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  min-height: 154px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.28), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 18px 44px rgba(0, 0, 0, 0.14);
+}
+
+.console-hero div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.console-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.console-hero strong {
+  font-size: clamp(3rem, 8vw, 4.8rem);
+  line-height: 0.86;
+}
+
+.console-hero p {
+  max-width: 340px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.route-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.route-card span {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.route-card code {
+  color: white;
+  font-size: 1.28rem;
+  font-weight: 900;
+}
+
+.readiness-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.readiness-grid div {
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.readiness-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.readiness-grid strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
 }
 
 .signal-card {
@@ -1234,19 +1114,6 @@ pre {
 
   .hero-copy {
     padding-left: 16px;
-  }
-
-  .topology-card:not(.compact) .topology-map {
-    height: 230px;
-  }
-
-  .topology-card:not(.compact) .topology-node.model {
-    top: 32px;
-    right: 14px;
-  }
-
-  .topology-card:not(.compact) .topology-node.output {
-    right: 24px;
   }
 
   .toolbar {
