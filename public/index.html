@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Deployment Console</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient-stage" aria-hidden="true">
+      <div class="stage-plate plate-one"></div>
+      <div class="stage-plate plate-two"></div>
+      <div class="stage-plate plate-three"></div>
+      <div class="circuit-field"></div>
+    </div>
+
+    <main class="shell">
+      <nav class="topbar" aria-label="Console navigation">
+        <a class="brand" href="#" aria-label="AI Deployment Console home">
+          <span class="brand-mark">AI</span>
+          <span>
+            <strong>Deployment Console</strong>
+            <small>AI Deployment Engineer Portfolio</small>
+          </span>
+        </a>
+        <div class="topbar-actions" aria-label="Deployment readiness">
+          <span class="live-dot"></span>
+          <span>Serverless Ready</span>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">OpenAI + Vercel Deployment Console</p>
+          <h1 id="page-title">AI solutions designed for production review.</h1>
+          <p class="lede">
+            A recruiter-ready web application that turns real business, coding, and strategy requests into structured deployment briefs with implementation planning, risk awareness, and clean serverless architecture.
+          </p>
+          <div class="hero-actions" aria-label="Project highlights">
+            <span>OpenAI API</span>
+            <span>Vercel Functions</span>
+            <span>No Express</span>
+            <span>Structured Output</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="AI deployment status summary">
+          <div class="signal-board">
+            <div class="console-window">
+              <div class="window-bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="signal-card green">
+                <span>Deployment Readiness</span>
+                <strong>92%</strong>
+              </div>
+              <div class="signal-card blue">
+                <span>Serverless Route</span>
+                <strong>/api/ask</strong>
+              </div>
+              <div class="signal-card amber">
+                <span>Governance Check</span>
+                <strong>Active</strong>
+              </div>
+              <div class="topology-card compact">
+                <div class="topology-header">
+                  <span>Topology</span>
+                  <strong>OpenAI Flow</strong>
+                </div>
+                <div class="topology-map" aria-hidden="true">
+                  <span class="topology-node intake">Input</span>
+                  <span class="topology-node api">API</span>
+                  <span class="topology-node model">AI</span>
+                  <span class="topology-node output">Brief</span>
+                  <i class="route route-a"></i>
+                  <i class="route route-b"></i>
+                  <i class="route route-c"></i>
+                  <i class="route route-d"></i>
+                </div>
+              </div>
+              <div class="pipeline" aria-label="Deployment pipeline">
+                <span title="Prompt intake"></span>
+                <span title="OpenAI processing"></span>
+                <span title="JSON response"></span>
+                <span title="UI render"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-strip" aria-label="Console metrics">
+        <div>
+          <span class="metric-label">Runtime</span>
+          <strong>Vercel Serverless</strong>
+        </div>
+        <div>
+          <span class="metric-label">AI Contract</span>
+          <strong>Structured Response</strong>
+        </div>
+        <div>
+          <span class="metric-label">Review Areas</span>
+          <strong>Cost, Risk, Delivery</strong>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Recruiter-ready project proof points">
+        <div>
+          <span>01</span>
+          <strong>Serverless backend</strong>
+          <p>Uses a Vercel function in <code>/api/ask</code>, no Express server.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>Real AI integration</strong>
+          <p>Calls OpenAI from the backend with environment-based secrets.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>Structured delivery</strong>
+          <p>Transforms raw requests into clear implementation briefs.</p>
+        </div>
+        <div>
+          <span>04</span>
+          <strong>Deployment mindset</strong>
+          <p>Highlights reliability, cost, adoption, and governance.</p>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="AI deployment request form">
+        <form id="ask-form" class="composer">
+          <div class="section-title">
+            <p class="eyebrow">Request Intake</p>
+            <h2>Generate a production AI brief</h2>
+          </div>
+
+          <div class="toolbar" role="radiogroup" aria-label="Response mode">
+            <label>
+              <input type="radio" name="mode" value="Business" checked />
+              <span>Business</span>
+            </label>
+            <label>
+              <input type="radio" name="mode" value="Coding" />
+              <span>Coding</span>
+            </label>
+            <label>
+              <input type="radio" name="mode" value="Strategy" />
+              <span>Strategy</span>
+            </label>
+          </div>
+
+          <label class="field-label" for="prompt">Business, coding, or strategy request</label>
+          <textarea
+            id="prompt"
+            name="prompt"
+            rows="8"
+            maxlength="4000"
+            placeholder="Example: Build an AI assistant for a support team that summarizes tickets, flags urgent issues, drafts replies, and reports weekly quality metrics."
+            required
+          ></textarea>
+
+          <div class="actions">
+            <p id="char-count" class="char-count">0 / 4000</p>
+            <button id="submit-button" type="submit">
+              <span class="button-text">Generate AI Deployment Brief</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+
+        <div class="side-rail">
+          <aside class="insight-panel" aria-labelledby="insight-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Engineering Lens</p>
+                <h2 id="insight-title">Production Signals</h2>
+              </div>
+            </div>
+            <div class="checklist" aria-label="Review focus areas">
+              <span>Security</span>
+              <span>Cost Control</span>
+              <span>Adoption</span>
+              <span>Reliability</span>
+            </div>
+            <div class="stack-map" aria-label="Application architecture">
+              <div>Frontend</div>
+              <span></span>
+              <div>API Route</div>
+              <span></span>
+              <div>OpenAI</div>
+            </div>
+            <div class="mini-chart" aria-hidden="true">
+              <span style="height: 44%"></span>
+              <span style="height: 72%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 86%"></span>
+              <span style="height: 64%"></span>
+            </div>
+          </aside>
+
+          <aside class="history-panel" aria-labelledby="history-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Session Memory</p>
+                <h2 id="history-title">Prompt History</h2>
+              </div>
+              <button id="clear-history" type="button">Clear</button>
+            </div>
+            <ul id="history-list" class="history-list">
+              <li class="empty-state">Recent prompts appear here.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="status" class="status" role="status" aria-live="polite"></section>
+
+      <section id="output" class="output" aria-live="polite" hidden>
+        <div class="output-header">
+          <div>
+            <p class="eyebrow">AI Response</p>
+            <h2>Structured Deployment Brief</h2>
+          </div>
+          <p id="response-meta" class="meta"></p>
+        </div>
+
+        <article class="result-grid">
+          <section class="result-block">
+            <h3>Problem Understanding</h3>
+            <p id="problem-understanding"></p>
+          </section>
+
+          <section class="result-block">
+            <h3>Suggested Solution</h3>
+            <p id="suggested-solution"></p>
+          </section>
+
+          <section class="result-block wide">
+            <h3>Step-by-Step Plan</h3>
+            <ol id="step-plan"></ol>
+          </section>
+
+          <section id="code-block-wrapper" class="result-block wide" hidden>
+            <h3>Optional Code Example</h3>
+            <pre><code id="code-example"></code></pre>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

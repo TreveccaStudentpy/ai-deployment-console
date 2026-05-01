@@ -1,0 +1,21 @@
+{
+  "name": "ai-deployment-console",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Vercel-ready AI deployment console demo using Node.js serverless functions and the OpenAI API.",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev",
+    "lint": "node --check api/ask.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "vercel": "^44.2.8"
+  }
+}
